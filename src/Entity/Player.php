@@ -32,6 +32,12 @@ class Player
      */
     private $email;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="players")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +75,18 @@ class Player
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
