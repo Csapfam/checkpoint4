@@ -12,7 +12,7 @@ body {
    
 }
 
-.home {
+.home, .best-activity {
     text-align: center;
     color: white;
     font-weight: bold;
@@ -52,4 +52,19 @@ h4 {
 .p-sending {
     text-align: center;
     font-size: 15px;
+}
+
+.logo-activity {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.logo-soccer, .logo-basket {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu:hover, .menu:active {
+    color: white;
 }

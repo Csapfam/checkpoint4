@@ -12,11 +12,28 @@
     <div class="title"></div>
         <h1 class="home">MA2FO Association</h1>
     
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="home-activity">
+        <h3 class="best-activity">Vos activités préférées...</h3>
+        <div class="logo-activity">
+            <div class="logo-soccer">
+                <div class="img-soccer">
+                    <img src="{{ asset('/build/images/logo-soccer.f8cff618.png') }}" alt="football"/>
+                </div>
+                <div class="btn-r">
+                    <a class="register" href="{{path('player_new')}}">S'inscrire</a>
+                </div>
+            </div>
+            <div class="logo-basket">
+                <div class="img-basket">
+                    <img src="{{ asset('/build/images/logo-basket2.9bc372f0.png') }}" alt="football"/>
+                </div>
+                <div class="btn-r">
+                    <a class="register" href="{{path('player_new')}}">S'inscrire</a>
+                </div>
+            </div>
+        </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/wilder/git/symfony/checkpoint4/checkpoint4/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/wilder/git/symfony/checkpoint4/checkpoint4/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+    </div>
 </div>
 {% endblock %}

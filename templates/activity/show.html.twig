@@ -3,7 +3,6 @@
 
 {% block body %}
 <div>
-   {# <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{program.title}} poster">#}
     <div class="media-body">
         <h1 class="mt-0">{{ activity.name }}</h1>
         <p>{{ activity.description }}</p>
@@ -13,7 +12,7 @@
            
                 {% for category in activity.category %}
                     <li>
-                        {{ category.name }}  {#- <a href="{{ path('program_season_show', {program:program.id, season:season.id}) }}">Episodes de la saison</a>#}
+                        {{ category.name }}
                     </li>
 
                 {% endfor %}
@@ -28,7 +27,7 @@
         {% endfor %}
     </ul>
 
-<a href="{{ path('home_home')}}">
+<a href="{{ path('home_index')}}">
     Retour à l'accueil
 </a>
 
