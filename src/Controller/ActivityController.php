@@ -72,7 +72,7 @@ class ActivityController extends AbstractController
     /**
      * @Route("show/{id<^[0-9]+$>}", name="show", methods={"GET"})
      */
-    public function show(Activity $activity): Response
+    public function show(Activity $activity, Category $category): Response
     {
         if (!$activity){
             throw $this->createNotFoundException(

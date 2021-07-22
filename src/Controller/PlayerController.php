@@ -63,7 +63,7 @@ class PlayerController extends AbstractController
 
             $mailer->send($email);
 
-        return $this->redirectToRoute('home_home');
+        return $this->redirectToRoute('home_index');
         }
         // Render the form
         return $this->render('player/new.html.twig', ["form" => $form->createView()]);

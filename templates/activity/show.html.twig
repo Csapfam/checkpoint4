@@ -11,9 +11,9 @@
     <h2>Catégories de {{ activity.name}}</h2>
             <ul>
            
-                {% for category in activity.categories %}
+                {% for category in activity.category %}
                     <li>
-                        {{ category.name }}  - <a href="{{ path('program_season_show', {program:program.id, season:season.id}) }}">Episodes de la saison</a>
+                        {{ category.name }}  {#- <a href="{{ path('program_season_show', {program:program.id, season:season.id}) }}">Episodes de la saison</a>#}
                     </li>
 
                 {% endfor %}
@@ -21,8 +21,8 @@
 </div>
     <strong>Joueurs inscrits :</strong>
     <ul>
-        {% for player in activity.players %}
-            <li>{{ player.firstname }} {{ player.lastname }} - <a href="{{ path('actor_show', {id:actor.id}) }}">Fiche acteur</a></li>
+        {% for player in activity.player %}
+            <li>{{ player.firstname }} {{ player.lastname }}</li>
         {% else %}
             <li>Aucun joueur pour cette activité</li>
         {% endfor %}
