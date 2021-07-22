@@ -34,9 +34,15 @@ class Activity
      */
     private $category;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Player::class, mappedBy="activity")
+     */
+    private $player;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
+        $this->player = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -88,6 +94,36 @@ class Activity
     public function removeCategory(Category $category): self
     {
         $this->category->removeElement($category);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Player[]
+     */
+    public function getPlayer(): Collection
+    {
+        return $this->player;
+    }
+
+    public function addPlayer(Player $player): self
+    {
+        if (!$this->player->contains($player)) {
+            $this->player[] = $player;
+            $player->setActivity($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayer(Player $player): self
+    {
+        if ($this->player->removeElement($player)) {
+            // set the owning side to null (unless already changed)
+            if ($player->getActivity() === $this) {
+                $player->setActivity(null);
+            }
+        }
 
         return $this;
     }

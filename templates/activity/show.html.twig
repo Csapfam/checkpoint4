@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+{% block title %}Activité {{ activity.name }}{% endblock %}
+
+{% block body %}
+<div>
+   {# <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{program.title}} poster">#}
+    <div class="media-body">
+        <h1 class="mt-0">{{ activity.name }}</h1>
+        <p>{{ activity.description }}</p>
+    </div>
+    <h2>Catégories de {{ activity.name}}</h2>
+            <ul>
+           
+                {% for category in activity.categories %}
+                    <li>
+                        {{ category.name }}  - <a href="{{ path('program_season_show', {program:program.id, season:season.id}) }}">Episodes de la saison</a>
+                    </li>
+
+                {% endfor %}
+            </ul>
+</div>
+    <strong>Joueurs inscrits :</strong>
+    <ul>
+        {% for player in activity.players %}
+            <li>{{ player.firstname }} {{ player.lastname }} - <a href="{{ path('actor_show', {id:actor.id}) }}">Fiche acteur</a></li>
+        {% else %}
+            <li>Aucun joueur pour cette activité</li>
+        {% endfor %}
+    </ul>
+
+<a href="{{ path('home_home')}}">
+    Retour à l'accueil
+</a>
+
+{% endblock %}
