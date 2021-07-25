@@ -17,7 +17,11 @@ body {
     text-align: center;
     color: white;
     font-weight: bold;
-    padding-top: 30px;
+    padding-top: 50px;
+}
+
+.best-activity {
+    margin-bottom: 20px;
 }
 
 img .picture-activity {
@@ -55,15 +59,17 @@ h4 {
     font-size: 15px;
 }
 
+
 .logo-activity {
     display: flex;
     justify-content: space-around;
     
 }
 
-.logo-soccer, .logo-basket {
+.logo-soccer, .logo-basket, .logo-volley {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .menu {
@@ -72,4 +78,16 @@ h4 {
 
 .menu:hover, .menu:active, .link-footer:hover:hover, .link-footer:active {
     color: #10B7C0;
+}
+
+.img-soccer, .img-basket {
+    margin-bottom: 10px;
+}
+
+.register {
+    color: white;
+}
+
+.list {
+    text-align: center;
 }

@@ -8,7 +8,7 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
+<div class="example-wrapper list">
     <h1>Nos activités sportives</h1>
 
    {% for activity in activities %}
@@ -26,7 +26,7 @@
 		</div>
 
 		{% else %}
-		aucune activitée trouvée.
+		aucune activité trouvée.
 
 	{% endfor %}
 	<a href="{{path('home_index')}}">Retour à l'accueil</a>
