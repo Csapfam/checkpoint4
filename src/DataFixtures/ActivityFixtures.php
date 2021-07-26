@@ -13,12 +13,12 @@ class ActivityFixtures extends Fixture
         // Football
         $football = new Activity();
         $football->setName('Football');
-        $football->setDescription('Pour devenir le nouveau M\'Bappé');
+        $football->setDescription('Devenir M\'Bappé');
 
         // Rugby
         $rugby = new Activity();
         $rugby->setName('Rugby');
-        $rugby->setDescription('Avec l\'aide de Sébastien Chabal');
+        $rugby->setDescription('Costaud, tu seras !');
 
         // Basket
         $basket = new Activity();

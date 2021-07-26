@@ -91,3 +91,35 @@ h4 {
 .list {
     text-align: center;
 }
+
+.title-activity, .return-page {
+    color: white;
+    text-align: start;
+}
+
+.return-page {
+    margin-top: 15px;
+}
+
+.flex-activity {
+    border: 5px solid rgb(111,41,97);
+    border-radius: .5em;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1em;
+    column-gap: 20px;
+    width: 500px;
+    justify-content: center;
+}
+
+.one-activity {
+    padding: 10px;
+    background-color: rgba(111,41,97,.3);
+    border: 2px solid rgba(111,41,97,.5);
+    flex: 1 1 120px;
+}
+
+.home-page {
+    color: white;
+}

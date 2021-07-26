@@ -9,26 +9,30 @@
 </style>
 
 <div class="example-wrapper list">
-    <h1>Nos activités sportives</h1>
+    <h1 class="title-activity">Nos activités sportives</h1>
 
-   {% for activity in activities %}
-		<div>
-			<h2>{{ loop.index}} / {{activity.name}} </h2>
+   <div class="flex-activity">
+		{% for activity in activities %}
+			<div class="one-activity">
+				<h2>{{activity.name}} </h2>
+					
+				<p>{{activity.description}}</p>
+
+				<p>
+					<div class="btn-r">
+						<a class="register" href="{{path('player_new')}}">S'inscrire</a>
+					</div>
+				</p>
 				
-			<p>{{activity.description}}</p>
+			</div>
 
-			<p>
-				<div class="btn-r">
-                    <a class="register" href="{{path('player_new')}}">S'inscrire</a>
-                </div>
-			</p>
-			
-		</div>
+			{% else %}
+			aucune activité trouvée.
 
-		{% else %}
-		aucune activité trouvée.
-
-	{% endfor %}
-	<a href="{{path('home_index')}}">Retour à l'accueil</a>
+		{% endfor %}
+	</div>
+	<div class="return-page">
+		<a class="home-page" href="{{path('home_index')}}">Retour à l'accueil</a>
+	</div>
 </div>
 {% endblock %}
